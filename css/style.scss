@@ -1,0 +1,107 @@
+@import "compass";
+@import url(https://fonts.googleapis.com/css?family=Abel);
+// font-family
+$baseFontFamily :"游ゴシック",
+YuGothic,
+"メイリオ",
+Verdana,
+"Hiragino Kaku Gothic ProN",
+Meiryo,
+sans-serif;
+
+
+// colors
+$baseColor: #fdfcf6;
+$subColor: #bea300;
+$keyColor: #14c0c9;
+$fontColor: #4c4c4c;
+
+
+/* Base---------------------------------------------------*/
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  color: $fontColor;
+  font-size: 1.4rem;
+  font-family: $baseFontFamily;
+  line-height: 1.6;
+  letter-spacing: 0.1em;
+  background-color: $baseColor;
+}
+
+
+
+// Align
+.text-center {
+  text-align: center;
+}
+
+
+
+// header
+.box {
+  background-image: url("../img/header.jpg");
+  height: 250px;
+  width: 100%;
+  background-size: cover;
+  background-position: center center;
+}
+
+
+// main
+// タイトル1
+.container {
+  @include display-flex;
+  justify-content: space-between;
+  @include flex-direction(column);
+}
+
+.skill-box {
+  background-color: $subColor;
+  margin: 20px;
+  h3 {
+    background-color: $keyColor;
+  }
+  p {
+    padding: 20px;
+  }
+}
+
+// footer
+footer {
+  background-color: tomato;
+  padding: 20px;
+  #button {
+    text-align: center;
+  }
+  .button1 {
+    background-color: skyblue;
+    padding: 5px 10px;
+    border-radius: 5px;
+  }
+}
+
+
+
+
+
+
+
+// desktop---------------------------------------------------
+@media (min-width: 769px) {
+  .box {
+    height: 500px;
+  }
+
+  .container {
+    @include flex-direction(row);
+    .skill-box {
+      flex: 1
+    }
+  }
+
+
+}
